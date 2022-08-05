@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
-    let squares = document.querySelectorAll('.grid div')
+    let squares = Array.document.querySelectorAll('.grid div')
     const scoreDisplay = document.querySelector('#score')
     const startBtn = document.querySelector('#start-button')
     const width = 10
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Freeze function
     function freeze () {
-        if(current.some(index => squares[currentPosition + index + width].classList.contains ('taken'))) {
+        if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
             current.forEach(index => squares[currentPosition + index].classList.add('taken'))
             //starts a new tetromino falling
             random = nextRandom
